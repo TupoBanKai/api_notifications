@@ -12,8 +12,8 @@ class NotificationController < ApplicationController
     else
       render :json {
         message: "something wrong"
-
       }
+    end
   end
 
   def new
@@ -27,6 +27,7 @@ class NotificationController < ApplicationController
   def update
     if @notification.update(notif_params)
       redirect_to @notification
+    end
   end
 
   def edit
